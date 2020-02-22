@@ -58,6 +58,9 @@ define_keymap(
         # Beginning/End of line
         K("C-a"): with_mark(K("home")),
         K("C-e"): with_mark(K("end")),
+        # Page up/down
+        K("C-M-p"): with_mark(K("page_up")),
+        K("C-M-n"): with_mark(K("page_down")),
         # Beginning/End of file
         K("M-Shift-comma"): with_mark(K("C-home")),
         K("M-Shift-dot"): with_mark(K("C-end")),

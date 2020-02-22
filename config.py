@@ -62,9 +62,6 @@ define_keymap(
         # Beginning/End of line
         K("C-a"): with_mark(K("home")),
         K("C-e"): with_mark(K("end")),
-        # Page up/down
-        K("M-v"): with_mark(K("page_up")),
-        K("C-v"): with_mark(K("page_down")),
         # Beginning/End of file
         K("M-Shift-comma"): with_mark(K("C-home")),
         K("M-Shift-dot"): with_mark(K("C-end")),
@@ -92,8 +89,7 @@ define_keymap(
         # C-x YYY
         K("C-x"): {
             # C-x h (select all)
-            K("h"): [K("C-home"), K("C-a"),
-                     set_mark(True)],
+            K("h"): [K("C-home"), K("C-a"), set_mark(True)],
             # C-x C-f (open)
             K("C-f"): K("C-o"),
             # C-x C-s (save)

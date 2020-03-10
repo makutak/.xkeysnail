@@ -44,7 +44,8 @@ define_keymap(
 
 # Emacs-like keybindings in non-Emacs applications
 define_keymap(
-    lambda wm_class: wm_class not in ("Emacs", "URxvt", "X-terminal-emulator"),
+    lambda wm_class: wm_class not in
+    ("Emacs", "URxvt", "X-terminal-emulator", "Code"),
     {
         # Cursor
         K("C-b"): with_mark(K("left")),
@@ -75,7 +76,8 @@ define_keymap(
         K("C-d"): [K("delete"), set_mark(False)],
         K("M-d"): [K("C-delete"), set_mark(False)],
         # Kill line
-        K("C-k"): [K("Shift-end"), K("C-x"), set_mark(False)],
+        K("C-k"): [K("Shift-end"), K("C-x"),
+                   set_mark(False)],
         # Undo
         K("C-slash"): [K("C-z"), set_mark(False)],
         K("C-Shift-ro"): K("C-z"),
@@ -86,7 +88,8 @@ define_keymap(
         # C-x YYY
         K("C-x"): {
             # C-x h (select all)
-            K("h"): [K("C-home"), K("C-a"), set_mark(True)],
+            K("h"): [K("C-home"), K("C-a"),
+                     set_mark(True)],
             # C-x C-f (open)
             K("C-f"): K("C-o"),
             # C-x C-s (save)
